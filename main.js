@@ -1,5 +1,4 @@
 /*created by prashant shukla */
-
 var paddle2 =10,paddle1=10;
 
 var paddle1X = 10,paddle1Height = 110;
@@ -121,7 +120,11 @@ function draw(){
   }
 }
 
-
+function restart()
+{
+  pcscore = 0;
+  loop();
+}
 
 //function reset when ball does notcame in the contact of padde
 function reset(){
@@ -186,7 +189,7 @@ if(pcscore ==4){
     stroke("white");
     textSize(25)
     text("Game Over!☹☹",width/2,height/2);
-    text("Reload The Page!",width/2,height/2+30)
+    text("Press restart Button",width/2,height/2+30)
     noLoop();
     pcscore = 0;
 }
@@ -216,4 +219,3 @@ function paddleInCanvas(){
     mouseY =0;
   }  
 }
-
